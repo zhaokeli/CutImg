@@ -1,0 +1,24 @@
+#container{width:300px;height:300px;margin:0px auto;background:#ededed;}
+
+/**
+ * 剪切图片必须样式
+ */
+.cutimg-container{position:relative;text-align:center;overflow:hidden;background:url('data:image/gif;base64,R0lGODlhCgAKAMQAAAAAAP////39/fz8/Pv7+/r6+tTU1NLS0tHR0dDQ0M/Pz87Ozs3NzczMzMvLy8jIyP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAABAALAAAAAAKAAoAAAU3YCAGAuIoyjKSR5Mkyiq0b7wqD8M0Qi8QhsXhgEAMFYbCYDlwNBoP1e3VOAymCYZ1tUA5ENdRCAA7');}
+.cutimg-container *{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.cutimg-container .cut-black-bg{position:absolute;background:#000;opacity:.9;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);background:rgba(0,0,0,.9);height:100%;width:100%;z-index:2;}
+.cutimg-bg,.cutimg-zz{position:absolute;left:50%;top:50%;margin-left:-10000px;}
+.cutimg-bg{z-index:1;}
+.cutimg-zz{z-index:3;}
+.cutimg-zz .zz-img{clip:rect(0px,60px,200px,0px);position:absolute;z-index:4;}
+.move-point{position:absolute;width:50px;height:50px;border:dashed 1px #ccc;top:20px;left:20px;cursor:move;z-index:5;}
+.move-point .move-block{width:100%;height:100%;background:#000;opacity:0;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);}
+.ck-move-area{position:absolute;z-index:4;top:0px;left:0px;width:100%;height:100%;display:none;}
+.point-t-l,.point-t-c,.point-t-r,.point-b-l,.point-b-c,.point-b-r,.point-l-c,.point-r-c{position:absolute;width:8px;height:8px;border:solid 1px #ccc;background:rgba(0,0,0,.4);}
+.point-t-l{top:-6px;left:-6px;cursor:nw-resize;}
+.point-t-r{top:-6px;right:-6px;cursor:ne-resize;}
+.point-b-l{bottom:-6px;left:-6px;cursor:ne-resize;}
+.point-b-r{bottom:-6px;right:-6px;cursor:nw-resize;}
+.point-t-c{top:-6px;left:50%;margin-left:-3px;cursor:n-resize;}
+.point-b-c{bottom:-6px;left:50%;margin-left:-3px;cursor:n-resize;}
+.point-l-c{left:-6px;top:50%;margin-top:-3px;cursor:e-resize;}
+.point-r-c{right:-6px;top:50%;margin-top:-3px;cursor:e-resize;}
