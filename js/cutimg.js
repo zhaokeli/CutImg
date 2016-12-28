@@ -3,7 +3,7 @@
 	var _dev = true;
 
 	function _debug(msg) {
-		if (!_dev || undefined === console) {
+		if (!_dev || 'undefined' === typeof console) {
 			return;
 		}
 		if ('object' === typeof msg) {
